@@ -9,7 +9,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// ProxyHandler wraps the http.HandlerFunc to make it compatible with Gin
 func ProxyHandler(target string) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		targetURL, err := url.Parse(target)
